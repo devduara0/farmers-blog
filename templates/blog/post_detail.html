@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<div class="col-md-8 offset-md-2">
+
+    <h1>{{ post.title }}</h1>
+	<img  src="{{ post.cover.url}}"  alt="" width="100%">
+    
+	 <div class="card-body">
+	 <small>
+        {{ post.created_on.date }} 
+    </small>
+    <p>{{ post.text| linebreaks }}</p>
+     </div>
+{% endblock %}
